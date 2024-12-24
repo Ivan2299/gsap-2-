@@ -1,0 +1,263 @@
+/*--------------------*/
+/* HEADER             */
+/*--------------------*/
+:root {
+	--h-height: 5rem;
+	--h-logo-width: 13rem;
+	--burger-size: 100px;
+	--bg: transparent;
+}
+
+header {
+	height: var(--h-height);
+	opacity: 1;
+	transition: 0.15s linear opacity;
+}
+
+.h-wrap {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--bg);
+	transition: box-shadow, background-color var(--transition-2);
+	border: 1px solid var(--clr-border);
+}
+
+header.scrolled .h-wrap {
+	--bg-overlay: var(--clr-primary);
+	--clr-white: var(--clr-title);
+	--bg: var(--bg-overlay);
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.04);
+}
+
+.h-inner {
+	position: relative;
+	width: 100%;
+	height: var(--h-height);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: var(--sp-xs);
+}
+
+.h-logo {
+	display: block;
+	height: var(--h-height);
+	width: var(--h-logo-width);
+	flex-shrink: 0;
+}
+
+.h-logo img {
+	display: block;
+	max-width: 100%;
+	height: 100%;
+}
+
+.h-menu {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+
+.h-links {
+	margin-inline: auto;
+}
+
+.h-links ul {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--sp-sm);
+}
+
+.h-links a {
+	position: relative;
+	font-size: 1.25rem;
+	line-height: 1em;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--clr-white);
+	padding-bottom: 4px;
+}
+.h-links a::before {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 1px;
+	background-color: var(--clr-primary);
+	transition: var(--transition-1);
+}
+
+.h-btn {
+	height: 100%;
+	text-transform: uppercase;
+	clip-path: polygon(100% 0, 100% 50%, 100% 100%, 19% 100%, 0 51%, 0 0);
+	margin-left: auto;
+}
+
+.h-menu-overlay {
+	display: none;
+}
+
+.h-burger {
+	display: block;
+	position: relative;
+	display: block;
+	width: var(--burger-size);
+	height: 2.5rem;
+	cursor: pointer;
+}
+
+.h-burger i {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 1px;
+	background-color: var(--clr-white);
+	transition: var(--transition-1);
+}
+
+.h-burger i:before,
+.h-burger i:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -7px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--clr-white);
+	transition: var(--transition-1);
+}
+.open-menu .h-burger i {
+	background-color: transparent;
+}
+
+.open-menu .h-burger i:before,
+.open-menu .h-burger i:after {
+	top: 0;
+	transform-origin: center;
+	transform: rotate(-45deg);
+}
+
+.open-menu .h-burger i:after {
+	transform: rotate(45deg);
+}
+
+.open-menu .h-menu {
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+.open-menu .h-menu-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+	.h-links a:hover {
+		color: var(--clr-primary);
+	}
+	header.scrolled .h-links a:hover {
+		color: #fff;
+	}
+	header.scrolled .h-links a::before {
+		background-color: #fff;
+	}
+
+	.h-links a:hover::before {
+		width: 100%;
+	}
+
+	.h-btn:hover {
+		color: var(--clr-white);
+	}
+	.h-wrap::before {
+		content: '';
+		display: block;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		width: var(--burger-size);
+		background-color: var(--bg-overlay);
+		border: 1px solid var(--clr-border);
+		transition: var(--transition-1);
+	}
+}
+
+@media (max-width: 1600px) {
+	:root {
+		--h-height: 4.5rem;
+		--h-logo-width: 7.5rem;
+		--burger-size: 75px;
+	}
+}
+
+@media (max-width: 1200px) {
+	:root {
+		--h-height: 3.75rem;
+		--h-logo-width: 5.5rem;
+	}
+
+	header.hide .h-wrap {
+		transform: translateY(calc (var(--h-height) * -1));
+	}
+
+	.h-inner {
+		justify-content: flex-start;
+	}
+
+	.h-menu {
+		position: fixed;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: min(100%, 420px);
+		padding: 1rem;
+		padding-top: calc(var(--h-height) + 1rem);
+		transform: translateX(-100%);
+		background-color: var(--bg-overlay);
+		transition: var(--transition-1);
+		border-right: 1px solid var(--clr-border);
+		overflow-y: auto;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		opacity: 0;
+	}
+
+	.h-menu-overlay {
+		display: block;
+		position: fixed;
+		z-index: 99;
+		inset: 0;
+		opacity: 0;
+		visibility: hidden;
+		background-color: var(--bg-overlay);
+		transition: var(--transition-1);
+	}
+
+	.h-links {
+		margin-block: auto;
+	}
+
+	.h-links ul {
+		gap: 1.25rem;
+		flex-direction: column;
+	}
+	.h-links a {
+		font-size: 1rem;
+	}
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/bootstrap.grid.css" />
+		<link rel="stylesheet" href="css/helpers.css" />
+		<link rel="stylesheet" href="css/swiper.style.css" />
+		<link rel="stylesheet" href="css/typography.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/buttons.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/banner.css" />
+		<link rel="stylesheet" href="css/lr.css" />
+		<link rel="stylesheet" href="css/loader.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>gsap-practice</title>
+	</head>
+	<body>
+		<div class="loader">
+			<a class="loader-logo" href="index.html" aria-label="Company logo"> GSAP </a>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div id="content-block">
+			<header>
+				<div class="h-wrap">
+					<div class="container-fluid p-0">
+						<div class="h-inner">
+							<div class="h-burger js-open-menu"><i></i></div>
+
+							<a class="h-logo" href="index.html" aria-label="Company logo">
+								<img width="88" height="40" src="img/logo.svg" alt="" loading="eager" />
+							</a>
+							<div class="h-menu">
+								<nav class="h-links">
+									<ul>
+										<li><a href="#">Послуги</a></li>
+										<li><a href="#">Проєкти</a></li>
+										<li><a href="#">Про нас</a></li>
+										<li><a href="#">Цікава аналітика</a></li>
+										<li><a href="#">Контакти</a></li>
+										<li></li>
+									</ul>
+								</nav>
+							</div>
+
+							<div class="h-btn btn btn-primary">
+								<svg
+									width="24"
+									height="26"
+									viewBox="0 0 24 26"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path d="M6.51644 2.90942L11.4302 8.7207L6.51644 14.532" stroke="black" />
+									<path d="M0.0253894 8.49561L11.5978 8.54639" stroke="black" />
+									<path d="M16.7246 10.9094L11.8108 16.7207L16.7246 22.532" stroke="black" />
+									<path d="M23.2156 16.4956L11.6432 16.5464" stroke="black" />
+								</svg>
+
+								Консультація
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="h-menu-overlay"></div>
+			</header>
+			<main>
+				<!-- Banner-slider -->
+				<div class="banner section full">
+					<div class="swiper-entry banner-slider">
+						<div
+							class="swiper-container"
+							data-options='{
+                    "loop": true,
+										"effect": "fade",
+                    "speed": 1000,
+										"parallax": true,
+                    "arrowsOut": true,
+                    "autoplay": {
+                        "delay": 5000
+                    }
+                }'
+						>
+							<div class="swiper-wrapper">
+								<!-- 0 -->
+								<div class="swiper-slide">
+									<div class="banner-media banner-img">
+										<picture>
+											<!-- desktop -->
+											<source srcset="img/banner-01.webp" type="image/webp" media="(min-width:768px)" />
+											<source srcset="img/banner-01.jpg" type="image/jpg" media="(min-width:768px)" />
+											<!-- mobile -->
+											<source srcset="img/banner-01.webp" type="image/webp" media="(max-width:767px)" />
+											<source srcset="img/banner-01.jpg" type="image/jpg" media="(max-width:767px)" />
+											<img
+												fetchpriority="high"
+												width="380"
+												height="240"
+												src="#"
+												alt="Banner Image"
+												loading="eager"
+											/>
+										</picture>
+									</div>
+
+									<div class="banner-align align-bottom">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+													<div class="banner-info">
+														<div class="row justify-content-between">
+															<div class="col-lg-10 align-self-end">
+																<h1 class="h1 title">
+																	<span>Керуємо</span>
+																	<b>нерухомістю</b>
+																	<b>щоб ви нудьгували</b>
+																</h1>
+															</div>
+															<div class="col-lg-2">
+																<div class="text">
+																	GLADSAL генерує умови за якими нерухомість стає прибутковіше та дорожче
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 1 -->
+								<div class="swiper-slide">
+									<div class="banner-media banner-img">
+										<picture>
+											<!-- desktop -->
+											<source srcset="img/bg-01.webp" type="image/webp" media="(min-width:768px)" />
+											<source srcset="img/bg-01.png" type="image/png" media="(min-width:768px)" />
+											<!-- mobile -->
+											<source srcset="img/bg-01.webp" type="image/webp" media="(max-width:767px)" />
+											<source srcset="img/bg-01.png" type="image/png" media="(max-width:767px)" />
+											<img
+												fetchpriority="high"
+												width="380"
+												height="240"
+												src="#"
+												alt="Banner Image"
+												loading="eager"
+											/>
+										</picture>
+									</div>
+
+									<div class="banner-align align-bottom">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+													<div class="banner-info">
+														<div class="row justify-content-between">
+															<div class="col-lg-10 align-self-end">
+																<h1 class="h1 title">
+																	<span>Керуємо</span>
+																	<b>нерухомістю</b>
+																	<b>щоб ви нудьгували</b>
+																</h1>
+															</div>
+															<div class="col-lg-2">
+																<div class="text">
+																	GLADSAL генерує умови за якими нерухомість стає прибутковіше та дорожче
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination d-md-none"></div>
+						</div>
+						<div class="swiper-controls-wrap">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+
+					<div class="spacer-lg"></div>
+				</div>
+				<!-- Lr section -->
+				<div class="section lr-section">
+					<div class="container">
+						<div class="h2 section-title title-margin">
+							ЛІДЕРИ В УПРАВЛІННІ КОМЕНЦІЙНОЮ нерухомістю. З нами активи працюють на вас, а не ви на них.
+						</div>
+
+						<div class="row justify-content-between align-items-stretch lr-row">
+							<div class="col-lg-6 lr-left block">
+								<div class="lr-img-1">
+									<picture>
+										<source srcset="img/lr-img.webp" type="image/webp" />
+										<source srcset="img/lr-img.png" type="image/png" />
+										<img width="384" height="384" src="#" alt="" loading="lazy" />
+									</picture>
+								</div>
+							</div>
+							<div class="col-lg-6 lr-right block">
+								<div class="lr-content-1">
+									<div class="h1 title">200,000 м²</div>
+									<div class="text">
+										<p>
+											В управлінні, які включають понад 100 різних обʼєктів. Намагаємось використати кожен
+											квадратний метр.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<a href="#" class="btn btn-secondary btn-block lr-btn"><b>детальніше про нас</b></a>
+							</div>
+						</div>
+					</div>
+					<div class="spacer-lg"></div>
+				</div>
+			</main>
+			<footer></footer>
+		</div>
+		<!-- scripts -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+		<script src="
+		https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js
+		"></script>
+		<!-- swiper -->
+		<script src="./js/swiper/swiper-bundle.min.js"></script>
+		<script src="./js/swiper/swiper.js"></script>
+		<!-- js -->
+		<script src="js/animation.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
